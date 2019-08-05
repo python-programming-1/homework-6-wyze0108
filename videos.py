@@ -8,7 +8,7 @@ def get_video_data():
 
     vid_data = []
     with open('USvideos.csv', newline='') as csvfile:
-        spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+        spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for row in spamreader:
             if len(row) == 16:
                 vid_dict = {'video_id': row[0],
